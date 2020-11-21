@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .position {
+    writing-mode: vertical-rl;
+    @apply ml-2 text-xs uppercase font-heading font-normal tracking-tight;
+  }
+  .photo-badge {
+    @apply font-semibold text-sm font-body mt-2;
+  }
+  .sticky-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    @apply h-10;
+  }
+
+  .transition-width {
+    transition-property: width;
+  }
+
+  .transition-max-width {
+    transition-property: max-width;
+  }
+
+  .grid-item:nth-child(3n + 2) {
+    @apply mt-0;
+  }
+  .grid-item:nth-child(2n + 2) {
+    @apply mt-12;
+  }
+
+  @screen lg {
+    .grid-item:nth-child(2n + 2) {
+      @apply mt-0;
+    }
+    .grid-item:nth-child(3n + 2) {
+      @apply mt-32;
+    }
+  }
+}
